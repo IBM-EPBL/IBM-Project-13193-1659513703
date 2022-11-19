@@ -8,7 +8,7 @@ app=Flask(__name__)
 def generate_frames():
     camera=cv2.VideoCapture(0)
     detector = HandDetector(maxHands=1)
-    classifier = Classifier("keras_model.h5", "labels.txt")
+    classifier = Classifier("Model/signlang.h5", "Model/labels.txt")
     
     offset = 20
     imgSize = 300
